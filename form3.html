@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Phone Usage Survey</title>
+    <script>
+        function showSelected() {
+            var selectedProvider = document.getElementById("providerSelect").value;
+            alert("You selected: " + selectedProvider);
+        }
+    </script>
+</head>
+<body>
+    <h1>Mobile Phone Usage Survey</h1>
+    <form>
+        <label for="name">Name:<br></label>
+        <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
+        
+        <label for="email">E-Mail:<br></label>
+        <input type="email" id="email" name="email" placeholder="username@example.com"><br><br>
+        
+        <label>Which iPhone are you currently using?<br></label>
+        <select id="iphoneSelect" name="iphone">
+            <option value="iPhone 12">iPhone 12</option>
+            <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+            <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+            <option value="iPhone SE">iPhone SE</option>
+        </select><br><br>
+
+        <label>What issues do you most commonly encounter with your mobile phone?<br></label>
+        <textarea name="problem" rows="4"></textarea><br><br>
+
+        <label>Which mobile service provider have you used?<br></label>
+        <select id="providerSelect" name="provider">
+            <option value="中華電信">中華電信</option>
+            <option value="台灣大哥大">台灣大哥大</option>
+            <option value="遠傳">遠傳</option>
+            <option value="台灣之星">台灣之星</option>
+        </select><br>
+
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+            <input type="button" value="Show Selection" onclick="showSelected()">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
